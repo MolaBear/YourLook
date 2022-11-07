@@ -1,0 +1,297 @@
+:root {
+    --primary-color:#f9f9f9;
+}
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+html,
+body{
+    margin:0;
+    height: 100%; /* adding this to make footer sticky */    
+}
+
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex; /* adding this to make footer sticky */
+    flex-direction: column; /* adding this to make footer sticky */   
+}
+
+.container h1{
+    font-family:'Lato';
+}
+
+
+#outfit-box {
+    width: 100%;
+    height: 80%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#outfit-box section {
+    margin-bottom: 30px;
+}
+
+#outfit-box .clothing {
+    width: 90%;
+    height: 100%;
+    border-style: solid;
+    border-color: black;
+}
+
+#outfit-box .selector {
+    width: 90%;
+    height: 80px;
+    border-style: solid;
+    border-color: black;
+}
+
+#buttons {
+    width: 100%;
+    height: 20%;
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#buttons section {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#buttons .outfit-button {
+    height: 60%;
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+    border-style: solid;
+    border-color: black;
+}
+
+#buttons i {
+    padding: 20px;
+}
+
+.container{
+    width:100%;
+    margin: 0 auto; /* 0 top and bottom, auto left and right*/
+    padding:10px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /*overflow: none;*/
+}
+
+.container .toggle-btn{
+    margin-top:10px;
+    margin-left:10px;
+}
+
+.container .toggle-btn i {
+    font-size:20px;
+}
+
+.container h1{
+    margin-top:10px;
+    font-size:35px;
+}
+
+.app-header{
+    background-color: var(--primary-color);
+}
+
+.filter-header{
+    background-color: var(--primary-color);
+}
+
+#filter-bar{
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: 3px 2px 2px #ccc;
+}
+
+#filter-bar.active{
+    left:0px;
+}
+
+.filter-header{
+    height:40px;
+}
+
+.filter-header .filter-container h2{
+    padding:5px 0 0 5px;
+    margin-left: 5px;
+}
+
+#filter-bar .toggle-btn .fa-filter{
+    font-size:20px;
+}
+
+#filter-bar .closebtn {
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    margin-bottom:15px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+#filter-bar .criteria-block{
+    margin-left:10px;
+}
+
+#filter-bar .criteria-block h3{ 
+    margin-bottom:3px;
+}
+
+#filter-bar .criteria-block div{
+    margin-bottom: 1.5px;
+}
+
+#filter-bar .filter-btns{ 
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color:var(--primary-color);
+    height: 50px;
+    margin-top: 15px;
+    
+    
+}
+#filter-bar .filter-btns #reset-btn button{
+    padding:3px 15px 3px 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size:15px;
+    color:white;
+    background-color: #818181;
+}
+
+#filter-bar .filter-btns #apply-btn button{
+    padding:3px 15px 3px 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size:15px;
+    background-color: white;
+}
+
+#grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr); /*repeating twice 1fr, creating two columns*/
+    /*height:100vh;*/
+    grid-gap: 3px;
+    overflow:auto;
+    margin-left:7px;
+    padding-top:10px;  
+    
+}
+
+#wrapper{
+    display:flex;
+    align-items: flex-end;
+}
+
+
+#grid .item{
+    /*display:flex;
+    align-items:flex-start;
+    justify-content: center;
+    border: 1px solid black;
+    height:100%;*/
+
+    border: 1px #ccc solid;
+    width:175px;
+    height:175px;
+    margin-bottom:7px;
+    box-shadow: 1px 2px 2px #ccc; /*2px blur*/
+}
+
+#grid .add-panel{
+    display: flex;
+    flex-direction: column;
+    border: 1px #ccc solid;
+    /*padding:1px;*/
+    width:175px;
+    height:175px;
+    margin-bottom:7px;
+    background-color: var(--primary-color);
+    justify-content: center;
+    align-items: center;
+}
+
+#grid .add-panel i{
+    color:black;
+    opacity:0.7;
+    font-size: 50px;
+}
+
+#grid .item img{
+    width:170px;
+    height:170px;
+}
+
+.app-footer{
+    background-color: var(--primary-color); 
+    padding:10px;
+    font-size:14px;
+    margin-top: auto;
+    flex-shrink: 0; /* adding this to make footer sticky */
+}
+
+.app-footer ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /*put space in between elements and outside of element */
+    list-style: none;
+}
+
+.app-footer ul li{
+    display: flex; /*targeting list items and making them flex */
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-footer ul li a{
+    font-size: 18px;
+    margin-bottom:5px;
+    text-decoration:none;
+    color: black;
+    opacity: 0.4;
+    font-size: 22px;
+}
+
+.app-footer ul p{
+    opacity:0.4;
+}
+
+.app-footer ul li .fa-tshirt{
+    opacity:1.0;
+}
+
+.app-footer ul #style-icon p{
+    opacity:1.0;
+}
+
+.hide{
+    display:none;
+}
